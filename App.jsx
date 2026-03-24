@@ -10,14 +10,14 @@ export default function App() {
     Formal: { "tong": "kami", "sa": "saya", "ko": "anda", "pi": "pergi", "tra": "tidak" },
     Sopan: { "tong": "kami semua", "sa": "saya", "ko": "kamu", "pi": "mohon pamit", "tra": "tidak bisa" },
     Papua: { "saya": "sa", "kamu": "ko", "kami": "tong", "pergi": "pi", "tidak": "tra" }
-  };
+  
 
   const proses = () => {
     if (!inputText) return;
     let kata = inputText.toLowerCase().split(' ');
     let hasil = kata.map(k => kamusLia[mode][k] || k);
     setResult(hasil.join(' '));
-  };
+  
 
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif', textAlign: 'center', backgroundColor: '#f9f9f9', minHeight: '100vh' }}>
@@ -52,5 +52,5 @@ export default function App() {
         )}
       </div>
     </div>
-  );
+  
 }
